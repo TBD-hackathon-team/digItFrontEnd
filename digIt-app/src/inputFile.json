@@ -1,0 +1,16 @@
+{
+ "Outcome": "Success",
+ "Message": null,
+ "Identity": "Request",
+ "Delay": 0.0853532,
+ "FromCurrencySymbol": "BTC",
+ "FromCurrencyName": "Bitcoin",
+ "ToCurrencySymbol": "USD",
+ "ToCurrencyName": "United States dollar",
+ "Date": "10/20/2017",
+ "Time": "10:00:00 PM",
+ "Amount": 1,
+ "Result": 5958,
+ "Rate": 5958,
+ "Source": "SIX Financial Information"
+}

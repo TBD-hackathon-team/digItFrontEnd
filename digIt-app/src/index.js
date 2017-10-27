@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import axios from 'axios';
+import data from'./inputFile.json';
 
 class BitcoinTile extends React.Component{
     render(){
@@ -26,20 +27,30 @@ class BitCoinRestCall extends React.Component {
         };
       }
     
-      componentDidMount() {
-        axios.get(`http://globalcurrencies.xignite.com/xGlobalCurrencies.json/GetHistoricalRate?_token=AE4A02E0271A4E77B78B314AEE9A132D&Symbol=EURUSD&PriceType=Mid&AsOfDate=10/20/2017&FixingTime=22:00`)
-          .then(res => {
-            const posts = res.data.data.children.map(obj => obj.data);
-            this.setState({ posts });
-          });
+      
+    /*  componentDidMount(){
+        axios
+          .get('./inputFile.json')
+          .then(({ data })=> {
+            console.log(data);
+            this.setState(
+              { array: data.recipes }
+            );
+          })
+          .catch((err)=> {})
       }
-    
+    */
       render() {
+      
         return (
           <div>
             <ul>
-              {this.state.posts}
-            </ul>
+            <p>
+                Currency: {data.FromCurrencyName} ({data.FromCurrencySymbol})<br />
+                Current Date: {data.Date} <br />
+                Amount in USD: {data.Rate} <br />
+            </p>
+           </ul>
           </div>
         );
       }
